@@ -10,7 +10,7 @@ public class Library {
         }
     }
 
-    public void printLibraryInfo(Book[] library) {
+    public void printLibraryInf(Book[] library) {
         for (int i = 0; i < library.length; i++) {
             System.out.println(library[i].getAuthorName() + ": " + library[i].getBookName() + ": " + library[i].getPublishYear());
         }

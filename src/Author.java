@@ -1,9 +1,9 @@
 public class Author {
     private static String firstName;
     private static String lastName;
-    public Author(String firstName, String lastName) {
-        this.firstName = firstName;
-        this.lastName = lastName;
+    public Author(String firstN, String lastN) {
+        this.firstName = firstN;
+        this.lastName = lastN;
     }
 
     public String getFirstName() {

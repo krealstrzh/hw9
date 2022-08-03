@@ -13,7 +13,7 @@ public class Main {
         }
     }
     public static void main(String[] args) {
-        Author tolstoy = new Author("Lev", "Tolstoy");
+        Author tolstoy = new Author("Lev", "Tolstoi");
         Book warAndPeace = new Book("War and Peace", tolstoy.getFirstName() + " " + tolstoy.getLastName(), 1800);
         Author sholokhov = new Author("Mikhail", "Sholokhov");
         Book silentDon = new Book("Silent Don", sholokhov.getFirstName() + " " + sholokhov.getLastName(), 1928);
