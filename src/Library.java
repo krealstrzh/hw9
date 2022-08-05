@@ -1,12 +1,11 @@
 public class Library {
-    private int librarySize;
-    private Book[] books = new Book[librarySize];
+    private final Book[] books;
 
-    public Library (int librarySize) {
-        this.librarySize = librarySize;
+    public Library (Book[] books) {
+        this.books = books;
     }
 
-    public void putBook(Library whereToPut, Book bookToPut) {
+    public void putBook(Book bookToPut) {
         for (int i = 0; i < books.length; i++) {
             if (books[i] == null) {
                 books[i] = bookToPut;
@@ -15,7 +14,7 @@ public class Library {
         }
     }
 
-    public void printLibraryInfo(Library library) {
+    public void printLibraryInfo() {
         for (int i = 0; i < books.length; i++) {
             if (books[i] != null) {
                 System.out.println(books[i].getAuthor() + ": " + books[i].getBookName() + ": " + books[i].getPublishYear());
@@ -27,17 +26,25 @@ public class Library {
 
     public void printBookInfo(String bookName) {
         for (int i = 0; i < books.length; i++) {
-            if (books[i].getBookName().equals(bookName)) {
-                System.out.println(books[i].getBookName() + " by " + books[i].getAuthor() + " was published in " + books[i].getPublishYear());
+            if (books[i] != null) {
+                if (books[i].getBookName().equalsIgnoreCase(bookName)) {
+                    System.out.println(books[i].getBookName() + " by " + books[i].getAuthor() + " was published in " + books[i].getPublishYear());
+                } else {
+                    break;
+                }
             }
         }
     }
 
-    public void newPubYear(String bookName, int newYear) {
-        for (int i = 0; i < books.length; i++) {
-            if (books[i].getBookName().equalsIgnoreCase(bookName)) {
-                books[i].setPublishYear(newYear);
+    public void newPubYear(String bookTitle, int newYear){
+            for (int i = 0; i < books.length; i++) {
+                if (books[i] != null) {
+                    if (books[i].getBookName().equalsIgnoreCase(bookTitle)) {
+                        books[i].setPublishYear(newYear);
+                    }
+                } else {
+                    break;
+                }
             }
         }
-    }
 }

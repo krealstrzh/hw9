@@ -1,10 +1,10 @@
 public class Author {
-    private static String firstName;
-    private static String lastName;
+    private String firstName;
+    private String lastName;
 
-    public Author(String firstN, String lastN) {
-        this.firstName = firstN;
-        this.lastName = lastN;
+    public Author(String firstName, String lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
     }
 
     public String getFirstName() {
