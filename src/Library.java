@@ -30,13 +30,15 @@ public class Library {
                 if (books[i].getBookName().equalsIgnoreCase(bookName)) {
                     System.out.println(books[i].getBookName() + " by " + books[i].getAuthor() + " was published in " + books[i].getPublishYear());
                 } else {
-                    break;
+                    System.out.println("Книга не найдена :(");
                 }
+            } else {
+                break;
             }
         }
     }
 
-    public void newPubYear(String bookTitle, int newYear){
+    public void changePubYear(String bookTitle, int newYear){
             for (int i = 0; i < books.length; i++) {
                 if (books[i] != null) {
                     if (books[i].getBookName().equalsIgnoreCase(bookTitle)) {
