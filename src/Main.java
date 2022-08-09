@@ -15,5 +15,8 @@ public class Main {
         biblio.printBookInfo("war and peace");
         biblio.changePubYear("silent don", 1934);
         biblio.printBookInfo("Silent don");
+        System.out.println(warAndPeace);
+        System.out.println(warAndPeace.equals(silentDon));
+        System.out.println(warAndPeace.hashCode() == silentDon.hashCode());
     }
 }
